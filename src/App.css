@@ -1,0 +1,128 @@
+:root {
+  --bg-color: #FFFFF2;
+  --movies-bg-color: #7F5A83;
+  --font-color: #0D1F22;
+  --font-color-movie:#FFFFF2;
+  --border-color: #0D1F22;
+}
+
+body{
+  background-color: var(--bg-color);
+  color:var(--font-color);
+
+}
+.image{
+  max-width:250px;
+  max-height:250px;
+}
+
+
+.App{
+  margin:25px;
+  font-size:20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.moviesContainer{
+  margin-top:45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:32px;
+}
+.singleMovieContainer{
+  border-style:solid;
+  border-width: 10px;
+  border-color:var(--border-color);
+  color:var(--font-color-movie);
+  background: var(--movies-bg-color);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width:250px;
+  border-radius:30px;
+}
+@media only screen and (max-width: 900px) {
+  .moviesContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .moviesContainer {
+    grid-template-columns: 1fr;
+    max-width:250px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .singleMovieContainer{
+    max-width:250px;
+  }
+}
+.pages{
+  margin-top:15px;
+  margin-bottom:10px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.pageButton{
+  padding:10px;
+  background:none;
+  cursor:pointer;
+  font-size:20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:var(--font-color);
+  border-radius:15px;
+
+}
+
+.menu{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  margin:10px;
+}
+
+.select{
+  font-size:20px;
+  padding:10px;
+  color:var(--font-color);
+  border-radius:20px;
+  border-width:2px;
+}
+
+.releaseYearInput{
+  font-size:20px;
+  padding:10px;
+  color:var(--font-color);
+  border-radius:20px;
+  border-width:2px;
+  width:7ch;
+
+}
+.pageRow{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.title{
+  text-align: center;
+  border-style:solid;
+  border-width: 0px 0px 2px 0px;
+  border-color:var(--border-color);
+
+}
+.nextPage{
+  margin-left:auto;
+}
+
+.singleMovieTitle{
+  text-align: center;
+}
+
+.releaseYearSpan{
+  margin-bottom:20px;
+  margin-top:20px;
+
+}
